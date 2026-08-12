@@ -1,22 +1,22 @@
-@font-face {
+/* @font-face {
     font-family: mozilla;
     src: url(../media/fonts/MozillaText-SemiBold.ttf);
 }
 @font-face {
     font-family: robotomono;
     src: url(../media/fonts/RobotoMono-Regular.ttf);
-}
+} */
 
 
-.mozillaFont {
+/* .mozillaFont {
     font-family: mozilla;
 }
 /* .hero{
     background-image: url(../media/images/heroslide2.jpg);
+ */
 
-
-} */
-.hero {
+/* } */ 
+/* .hero {
     height: 90vh;
 
     background-image: url("images/hero-bike.png");
@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     padding: 0 7%;
-}
-.limeSpan{
+} */
+/* .limeSpan{
     font-family: robotomono;
-}
+} */
