@@ -25,7 +25,7 @@
           </a>
         </div>
         <div class="flex lg:hidden">
-          <button type="button" command="show-modal" commandfor="mobile-menu"
+          <button type="button" id="menuBtn" command="show-modal" commandfor="mobile-menu"
             class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Open main menu</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
@@ -35,7 +35,7 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-5">
-          <a href="/home"
+          <a href="/"
             class=" mozillaFont hover:text-black hover:bg-lime-300 hover:rounded-full hover:px-2 hover:py-2 text-white">HOME</a>
           <a href="/bikes"
             class=" mozillaFont hover:text-black hover:bg-lime-300 hover:rounded-full hover:px-2 hover:py-2 text-white">BIKES</a>
@@ -49,7 +49,7 @@
             class=" mozillaFont hover:text-black hover:bg-lime-300 hover:rounded-full hover:px-2 hover:py-2 text-white">REFERENCES</a>
         </div>
         <div class="hidden lg:mr-2 lg:flex lg:flex-1 lg:justify-end">
-          <a href="#"
+          <a href="/contact"
             class="text-sm/6 px-5 py-2.5 rounded-full mozillaFont bg-transparent hover:bg-lime-300 hover:text-black border-2 border-lime-300 text-lime-300 font-semibold text-black">BOOK
             NOW <span aria-hidden="true">&rarr;</span></a>
         </div>
@@ -60,11 +60,11 @@
             <el-dialog-panel
               class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
+                <a href="/" class="-m-1.5 p-1.5">
                   <span class="sr-only">Your Company</span>
                   <img src="./media/images/logo.png" alt="" class="h-17 w-auto" />
                 </a>
-                <button type="button" command="close" commandfor="mobile-menu"
+                <button type="button" id="closeMenuBtn" command="close" commandfor="mobile-menu"
                   class="-m-2.5 rounded-md p-2.5 text-gray-700">
                   <span class="sr-only">Close menu</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
@@ -78,19 +78,19 @@
                   <div class="space-y-2 py-6">
                     <a href="#"
                       class="-mx-3 mozillaFont block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-black hover:bg-lime-300">HOME</a>
-                    <a href="#"
+                    <a href="/bikes"
                       class="-mx-3 mozillaFont block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-black hover:bg-lime-300">BIKES</a>
-                    <a href="#"
+                    <a href="/technology"
                       class="-mx-3 mozillaFont block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-black hover:bg-lime-300">TECHNOLOGY</a>
-                    <a href="#"
+                    <a href="/about"
                       class="-mx-3 mozillaFont block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-black hover:bg-lime-300">ABOUT</a>
-                    <a href="#"
+                    <a href="/contact"
                       class="-mx-3 mozillaFont block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-black hover:bg-lime-300">CONTACT</a>
-                    <a href="#"
+                    <a href="/references"
                       class="-mx-3 mozillaFont block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-black hover:bg-lime-300">REFERENCES</a>
                   </div>
                   <div class="py-6">
-                    <a href="#"
+                    <a href="/contact"
                       class="lg:-mx-3 mozillaFont block rounded-lg py-3 text-base/3 mx-20 text-center font-semibold text-black hover:text-white sm:bg-lime-300 hover:bg-lime-400">BOOK
                       NOW</a>
                   </div>
@@ -134,10 +134,10 @@
             journeys. Ride freely, move efficiently, and experience the future with Voltra.
           </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#"
+            <a href="/bikes"
               class="rounded-md bg-transparent px-3.5 py-2.5 text-sm font-semibold text-lime-300 shadow-xs hover:text-black hover:bg-lime-300 outline-2 outline-lime-300">Explore
               E-bikes</a>
-            <a href="#" class="text-sm/6 font-semibold text-lime-300 hover:text-white">Learn more <span
+            <a href="/about" class="text-sm/6 font-semibold text-lime-300 hover:text-white">Learn more <span
                 aria-hidden="true">→</span></a>
           </div>
         </div>
@@ -787,6 +787,8 @@
   </footer>
 
   <!-- FOOTER END  -->
+
+  <script src="./script.js"></script>
 
 </body>
 
