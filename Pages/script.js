@@ -106,68 +106,113 @@ const bikes = [
     }
 ];
 
+
+// ==============================
 // DISPLAY BIKES
+// ==============================
 
 const bikeTrack = document.getElementById("bikeTrack");
 
 if (bikeTrack) {
 
-    bikes.forEach((bike) => {
+    for (let i = 0; i < bikes.length; i += 3) {
 
-        bikeTrack.innerHTML += `
-        
-            <div class="p-4 flex-none w-1/3">
+        // ONE SLIDE
+        const slide = document.createElement("div");
 
-                <div class="h-full bg-black
-                            border-2 border-black
-                            rounded-lg overflow-hidden">
+        // VERY IMPORTANT
+        // One slide occupies the complete visible area
+        slide.style.width = "100%";
+        slide.style.minWidth = "100%";
+        slide.style.flex = "0 0 100%";
+
+        // EXACTLY 3 COLUMNS
+        slide.style.display = "grid";
+        slide.style.gridTemplateColumns =
+            "repeat(3, minmax(0, 1fr))";
+
+
+        // Get 3 bikes
+        const slideBikes = bikes.slice(i, i + 3);
+
+
+        slideBikes.forEach((bike) => {
+
+            const cardWrapper = document.createElement("div");
+
+            // IMPORTANT
+            cardWrapper.style.minWidth = "0";
+            cardWrapper.style.padding = "16px";
+
+
+            cardWrapper.innerHTML = `
+
+                <div
+                    class="h-full overflow-hidden
+                    rounded-lg border-2 border-black
+                    bg-black"
+                >
 
                     <img
-                        class="lg:h-48 md:h-36 w-full
-                               object-cover object-center"
                         src="${bike.image}"
                         alt="${bike.name}"
+                        class="h-48 w-full object-cover object-center"
                     >
+
 
                     <div class="p-6">
 
-                        <h2 class="tracking-widest text-xs
-                                   font-medium text-gray-400 mb-1">
+                        <h2
+                            class="mb-1 text-xs font-medium
+                            tracking-widest text-gray-400"
+                        >
                             VOLTRA ELECTRIC
                         </h2>
 
-                        <h1 class="text-lg font-medium
-                                   text-gray-300 mb-3">
+
+                        <h1
+                            class="mb-3 text-lg font-medium
+                            text-white"
+                        >
                             ${bike.name}
                         </h1>
 
-                        <p class="leading-relaxed
-                                  text-gray-300 mb-5">
+
+                        <p
+                            class="mb-6 leading-relaxed
+                            text-gray-300"
+                        >
                             ${bike.description}
                         </p>
 
-                        <div class="flex items-center
-                                    justify-between">
 
-                            <span class="text-lime-300
-                                         font-semibold">
+                        <div
+                            class="flex items-center
+                            justify-between"
+                        >
+
+                            <span
+                                class="font-semibold
+                                text-lime-300"
+                            >
                                 ${bike.price}
                             </span>
 
+
                             <a
                                 href="/contact"
-                                class="text-lime-300
-                                       inline-flex items-center
-                                       hover:text-white"
+                                class="inline-flex items-center
+                                text-lime-300
+                                hover:text-white"
                             >
                                 Explore
 
                                 <svg
-                                    class="w-4 h-4 ml-2"
+                                    class="ml-2 h-4 w-4"
                                     viewBox="0 0 24 24"
+                                    fill="none"
                                     stroke="currentColor"
                                     stroke-width="2"
-                                    fill="none"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                 >
@@ -183,46 +228,62 @@ if (bikeTrack) {
 
                 </div>
 
-            </div>
+            `;
 
-        `;
-    });
+
+            slide.appendChild(cardWrapper);
+
+        });
+
+
+        bikeTrack.appendChild(slide);
+
+    }
+
 }
 
 
-
+// ==============================
 // BIKE SLIDER
+// ==============================
 
-const prevBike = document.getElementById("prevBike");
-const nextBike = document.getElementById("nextBike");
+const prevBike =
+    document.getElementById("prevBike");
+
+const nextBike =
+    document.getElementById("nextBike");
+
 
 let currentSlide = 0;
 
-if (bikeTrack && prevBike && nextBike) {
 
-    nextBike.addEventListener("click", () => {
+// NEXT
 
-        if (currentSlide === 0) {
+nextBike.addEventListener("click", function () {
 
-            currentSlide = 1;
+    if (currentSlide === 0) {
 
-            bikeTrack.style.transform = "translateX(-50%)";
+        currentSlide = 1;
 
-        }
+        bikeTrack.style.transform =
+            "translateX(-100%)";
 
-    });
+    }
+
+});
 
 
-    prevBike.addEventListener("click", () => {
+// PREVIOUS
 
-        if (currentSlide === 1) {
+prevBike.addEventListener("click", function () {
 
-            currentSlide = 0;
+    if (currentSlide === 1) {
 
-            bikeTrack.style.transform = "translateX(0%)";
+        currentSlide = 0;
 
-        }
+        bikeTrack.style.transform =
+            "translateX(0%)";
 
-    });
+    }
 
-}
+});
