@@ -74,35 +74,35 @@ const bikes = [
         name: "Crown Electric Firefly",
         image: "./media/images/bike02.webp",
         description: "Type Electric scooter. Motor 1200-1800 W brushless. Top speed up to 60-65 km/h. Range around 70-90 km in Eco mode. Battery 73.6V 30Ah LFP lithium.",
-        price: "Contact for price"
+        price: " Rs. 235,000"
     },
 
     {
         name: "YJ Future Aazadi Model 04 Electric Bike",
         image: "./media/images/bike03.png",
         description: "Motor: 1000W. Battery: 60V 23AH Graphene. Speed: 55 Km/h. Disc Brake. 50-60 KM per charging. One year warranty.",
-        price: "Contact for price"
+        price: " Rs. 180,000"
     },
 
     {
         name: "revoo A04",
         image: "./media/images/bike04.png",
         description: "Speed up to 30KM/H. Range up to 40KM. Graphene Battery 48V 12Ah. Charging Time 6-9 hours. Motor 350W.",
-        price: "Contact for price"
+        price: " Rs. 95,999"
     },
 
     {
         name: "Elektra Velocity 108",
         image: "./media/images/bike05.webp",
         description: "Motor 2000 Watt BLDC Motor. 2-year replacement warranty. Torque 120 Nm. Max Speed 85 km/h. Max Range 180 km. 3 Speed Modes and Reverse.",
-        price: "Contact for price"
+        price: " Rs. 375,000"
     },
 
     {
         name: "Elektra BOLT",
         image: "./media/images/bike06.webp",
         description: "Motor 72V 3000W BLDC Motor. 2-year replacement warranty. Torque 120 Nm. Max Speed 105 km/h. Economy, Sports and Reverse assistance.",
-        price: "Contact for price"
+        price: " Rs. 609,000"
     }
 ];
 
@@ -198,29 +198,6 @@ if (bikeTrack) {
                                 ${bike.price}
                             </span>
 
-
-                            <a
-                                href="/contact"
-                                class="inline-flex items-center
-                                text-lime-300
-                                hover:text-white"
-                            >
-                                Explore
-
-                                <svg
-                                    class="ml-2 h-4 w-4"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-
-                            </a>
 
                         </div>
 
