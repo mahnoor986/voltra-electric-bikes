@@ -38,6 +38,53 @@ if (form && successMessage) {
 
 }
 
+  (function(){
+      emailjs.init({
+        publicKey: "-2XUsQ7VfyLkOplOZ", 
+      });
+   })();
+
+
+   // Replace with your Service ID and Template ID from EmailJS
+const serviceID = "service_d1wevnv";
+const templateID = "template_2nv9qpi"; // Template ID matching your "Contact Us" template
+
+const templateParams = {
+  name: "name",        
+  email: "email", 
+  message: "message",  
+}
+
+emailjs.send(serviceID, templateID, templateParams)
+  .then((response) => {
+     console.log('SUCCESS!', response.status, response.text);
+     alert('Message sent successfully!');
+  })
+  .catch((error) => {
+     console.error('FAILED...', error);
+     alert('Failed to send message.');
+  });
+
+  const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const serviceID = 'YOUR_SERVICE_ID';
+  const templateID = 'u2z64lx';
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      console.log('SUCCESS!');
+      alert('Message sent successfully!');
+      form.reset();
+    })
+    .catch((error) => {
+      console.error('FAILED...', error);
+      alert('Failed to send message.');
+    });
+});
+
 
 // MOBILE NAVBAR
 
